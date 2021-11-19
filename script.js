@@ -8,12 +8,9 @@ function writePassword() {
   passwordText.value = password;
 };
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
 function generatePassword() {
-    console.log("Hello");
-
+  var passwordLength = prompt("How many characters do you want your password to contain?");
+  console.log("passwordLength",passwordLength);
 
 };
 
@@ -29,12 +26,20 @@ var upperCaseLetters=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O
 var specialCharacters=["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", "]"]
 
 // Write password to the #password input
-function writePassword() {
-  var passwordLength = prompt("How many charactors do you want your password to contain?");
-  console.log("passwordLength",passwordLength); 
 
-};
-//   // var password = generatePassword();
+
+function generatePassword () {
+  var numbers = confirm("Do you want to use numbers?");
+  var useSpecialCharacters = confirm("Do you want to use special characters?");
+  var useLowerCase = confirm("Do you want to use lower case letters?");
+  var useUpperCase = confirm("Do you want to use capital letter?")
+
+  if (includeCapitalLetters === false && includeLowerCase === false && includeNumbers === false && includeSpecialCharacters === false) {
+    alert("You must choose at least one character type!")
+    return ""
+
+    }
+}
 
   
 //   var passwordText = document.querySelector("#password");
@@ -43,3 +48,5 @@ function writePassword() {
 
 // }
 
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
