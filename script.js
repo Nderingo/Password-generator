@@ -6,7 +6,16 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-}
+};
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
+function generatePassword() {
+    console.log("Hello");
+
+
+};
 
 
 //Password characters
@@ -23,18 +32,14 @@ var specialCharacters=["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-
 function writePassword() {
   var passwordLength = prompt("How many charactors do you want your password to contain?");
   console.log("passwordLength",passwordLength); 
-  // var password = generatePassword();
+
+};
+//   // var password = generatePassword();
 
   
-  var passwordText = document.querySelector("#password");
+//   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+//   passwordText.value = password;
 
-}
+// }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-function generatePassword() {
-    
-}
