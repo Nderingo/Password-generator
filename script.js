@@ -1,7 +1,5 @@
 //Password characters
-// function generatePassword() {
 
-  //   var password
   var passwordArray = [];
   var password = "";
 var numbers=["0","1","2","3","4","5","6","7","8","8","9"];
@@ -12,14 +10,7 @@ var upperCase=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","
 
 var specialCharacters=["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", "]"];
 
-// erturn password;
-// }
-// var passwordArray = [];
-// var userPassword = "";
-// Assignment Code
 var generateBtn = document.querySelector("#generate");
-
-
 
 function generatePassword () {
   var passwordLength = prompt("How many characters do you want your password to contain?");
@@ -64,11 +55,8 @@ function generatePassword () {
     
     password +=  passwordArray[Math.floor(Math.random() * passwordArray.length)];
   
-    // document.querySelector("#password").placeholder=userPassword;
-    console.log(password);
     return password;
-  
-}
+  }
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
