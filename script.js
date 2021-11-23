@@ -21,7 +21,7 @@ function generatePassword () {
   }
   
   var useNumbers = confirm("Do you want to use numbers?");
-  if (useNumbers) {
+  if (useNumbers===true) {
     console.log(passwordArray)
     passwordArray.push(...numbers);
     console.log(passwordArray)
